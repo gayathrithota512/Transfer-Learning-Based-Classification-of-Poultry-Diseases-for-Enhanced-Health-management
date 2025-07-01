@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PoultryDetect</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 28px;
+        }
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .images {
+            margin-top: 40px;
+        }
+        .images img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Poultry Health Hub,<br>
+    your comprehensive resource for<br>
+    poultry disease management and prevention.</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <p>Drop in the image you want to validate!</p>
+        <input type="file" name="pc_image" accept=".jpg, .jpeg, .png" required>
+        <br><br>
+        <button type="submit" class="button">Get Started</button>
+    </form>
+
+    <div class="images">
+        <img src="/static/coccidiosis.jpg" alt="Coccidiosis">
+        <img src="/static/disease.jpg" alt="Disease">
+        <img src="/static/healthy.jpg" alt="Healthy">
+        <img src="/static/farm.jpg" alt="Farm">
+    </div>
+</body>
+</html>
